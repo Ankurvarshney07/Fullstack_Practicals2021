@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter</title>
+    <style>
+        *{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #aaa;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+h1{
+    color: white;
+    font-size: 50px;
+}
+.card{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50%;
+    padding: 100px;
+}
+
+h2{
+    margin: 0 50px;
+    font-size: 50px;
+    color: white;
+}
+
+button{
+    width: 70px;
+    height: 70px;
+    outline: yellow;
+    border-style: line;
+    font-size: 50px;
+    background-color: yellow;
+    box-shadow: 8px 8px 20px #00000027, -8px -8px 20px #969393;
+
+}
+ </style>
+</head>
+<body>
+    <div class="container">
+        <h1>COUNTER</h1>
+        <div class="card">
+            <button onclick="decrement()">-</button>
+            <h2 id="root"></h2>
+            <button onclick="increment()">+</button>
+        </div>
+    </div>
+    <script>
+        var data=0;
+        document.getElementById("root").innerText=data;
+        function decrement(){
+            data=data-1;
+            document.getElementById("root").innerText=data;
+        }
+        function increment(){
+            data=data+1;
+            document.getElementById("root").innerText=data;
+        }
+
+    </script>
+</body>
+</html>
